@@ -1,0 +1,33 @@
+{
+  "name": "routingworker",
+  "main": "src/index.js",
+  "compatibility_date": "2024-01-01",
+  
+  // Service bindings to other workers
+  // Add your target workers here
+  "services": [
+    {
+      "binding": "WORKER_A",
+      "service": "worker-a"
+      // Replace with your actual worker name
+    },
+    {
+      "binding": "WORKER_B",
+      "service": "worker-b"
+      // Replace with your actual worker name
+    }
+  ],
+  
+  // Optional: Define routes if you want to bind this to specific zones
+  // "routes": [
+  //   {
+  //     "pattern": "example.com/*",
+  //     "zone_name": "example.com"
+  //   }
+  // ],
+  
+  // Development settings
+  "dev": {
+    "port": 8787
+  }
+}

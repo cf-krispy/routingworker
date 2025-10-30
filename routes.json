@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "name": "App subdomain routes to Worker A",
+      "hostname": "app.example.com",
+      "worker": "WORKER_A"
+    },
+    {
+      "name": "API subdomain routes to Worker B",
+      "hostnameEndsWith": ".api.example.com",
+      "worker": "WORKER_B"
+    },
+    {
+      "name": "API path prefix routes to Worker A",
+      "pathnameStartsWith": "/api/",
+      "worker": "WORKER_A"
+    },
+    {
+      "name": "Admin section on www routes to Worker B",
+      "hostname": "www.example.com",
+      "pathnameStartsWith": "/admin",
+      "worker": "WORKER_B"
+    },
+    {
+      "name": "Default fallback to Worker A",
+      "default": true,
+      "worker": "WORKER_A"
+    }
+  ]
+}
